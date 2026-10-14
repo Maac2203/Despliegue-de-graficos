@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4. Día nevado soleado - Proyecto p5.js</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Gráfico 4: Día nevado soleado</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="teoria.html">Teoría (Canvas / p5.js)</a></li>
+                <li><a href="dom-inspector.html">Inspector DOM</a></li>
+                <li>
+                    <span>Dibujos:</span>
+                    <a href="rana.html">1. Rana</a> | 
+                    <a href="conejo.html">2. Dientes de conejo</a> | 
+                    <a href="cena.html">3. ¿Qué hay de cena?</a> | 
+                    <a href="dia-nevado.html">4. Día nevado</a> | 
+                    <a href="muneco-nieve.html">5. Muñeco de nieve</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>4. Día nevado soleado</h2>
+        <div id="canvas-container"></div>
+    </main>
+
+    <footer>
+        <p>© 2026 - Proyecto de Computación Gráfica</p>
+    </footer>
+
+    <script>
+        function setup() {
+            let canvas = createCanvas(400, 400);
+            canvas.parent('canvas-container');
+        }
+
+        function draw() {
+            background(156, 186, 255);
+            noStroke();
+
+            // El suelo
+            fill(23, 156, 63);
+            rect(0, 300, 400, 100);  
+
+            // El sol
+            fill(234, 255, 48);
+            ellipse(80, 64, 100, 100);  
+
+            // El muñeco de nieve
+            fill(255, 255, 255);
+            ellipse(200, 300, 150, 150);
+            ellipse(200, 200, 100, 100);
+            ellipse(200, 120, 75, 75);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Rana - Proyecto p5.js</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Gráfico 1: Rana</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="teoria.html">Teoría (Canvas / p5.js)</a></li>
+                <li><a href="dom-inspector.html">Inspector DOM</a></li>
+                <li>
+                    <span>Dibujos:</span>
+                    <a href="rana.html">1. Rana</a> | 
+                    <a href="conejo.html">2. Dientes de conejo</a> | 
+                    <a href="cena.html">3. ¿Qué hay de cena?</a> | 
+                    <a href="dia-nevado.html">4. Día nevado</a> | 
+                    <a href="muneco-nieve.html">5. Muñeco de nieve</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>1. Rana</h2>
+        <div id="canvas-container"></div>
+    </main>
+
+    <footer>
+        <p>© 2026 - Proyecto de Computación Gráfica</p>
+    </footer>
+
+    <script>
+        function setup() {
+            let canvas = createCanvas(400, 400);
+            canvas.parent('canvas-container');
+        }
+
+        function draw() {
+            background(240);
+            var x = 200;
+            var y = 250;
+
+            noStroke();
+            fill(30, 204, 91); // verde de la rana
+
+            ellipse(x, y, 200, 100); // cara
+            ellipse(x - 50, y - 50, 40, 40); // ojo izquierdo
+            ellipse(x + 50, y - 50, 40, 40); // ojo derecho
+
+            fill(255, 255, 255); // blanco de los ojos
+            ellipse(x - 50, y - 50, 30, 30); 
+            ellipse(x + 50, y - 50, 30, 30); 
+
+            fill(0, 0, 0);
+            ellipse(x, y, 122, 57);
+
+            rect(x - 50, y - 50, 10, 10);
+            rect(x + 50, y - 50, 10, 10);
+        }
+    </script>
+</body>
+</html>

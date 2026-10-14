@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. ¿Qué hay de cena? - Proyecto p5.js</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Gráfico 3: ¿Qué hay de cena?</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="teoria.html">Teoría (Canvas / p5.js)</a></li>
+                <li><a href="dom-inspector.html">Inspector DOM</a></li>
+                <li>
+                    <span>Dibujos:</span>
+                    <a href="rana.html">1. Rana</a> | 
+                    <a href="conejo.html">2. Dientes de conejo</a> | 
+                    <a href="cena.html">3. ¿Qué hay de cena?</a> | 
+                    <a href="dia-nevado.html">4. Día nevado</a> | 
+                    <a href="muneco-nieve.html">5. Muñeco de nieve</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>3. ¿Qué hay de cena?</h2>
+        <div id="canvas-container"></div>
+    </main>
+
+    <footer>
+        <p>© 2026 - Proyecto de Computación Gráfica</p>
+    </footer>
+
+    <script>
+        function setup() {
+            let canvas = createCanvas(400, 400);
+            canvas.parent('canvas-container');
+        }
+
+        function draw() {
+            background(186, 145, 20); // Mesa de madera
+            fill(255);
+            stroke(200);
+            ellipse(200, 200, 350, 350); // Plato base
+            ellipse(200, 200, 300, 300); 
+
+            // Carne
+            fill(120,45,25);
+            stroke(70,20,10);
+            ellipse(205,215,145,80);
+            ellipse(180,205,80,55);
+
+            stroke(40, 20, 10);
+            line(155,200,190,215);
+            line(165,185,200,200);
+            line(205,230,245,210);
+            line(215,240,255,220);
+
+            // Tocino
+            fill(190,45,45);
+            stroke(120,20,20);
+            rect(250,135,75,22);
+            rect(245,165,80,22);
+            rect(250,195,70,22);
+
+            fill(255,150,120);
+            rect(255,140,60,5);
+            rect(250,170,65,5);
+            rect(255,200,55,5);
+
+            // Papas
+            fill(245,190,55);
+            stroke(180,120,20);
+            rect(125,255,20,65);
+            rect(150,245,20,75);
+            rect(175,250,20,70);
+            rect(200,255,20,65);
+
+            fill(50,160,70);
+            stroke(20,100,30);
+            ellipse(285,260,70,55);
+            ellipse(315,275,60,50);
+            ellipse(270,285,55,45);
+
+            // Tomates
+            fill(220,45,35);
+            stroke(120,20,20);
+            ellipse(120,305,35,35);
+            ellipse(245,295,35,35);
+
+            // Hojas tomates
+            fill(40,130,50);
+            triangle(110,285,120,300,130,285);
+            triangle(235,275,245,295,255,275);
+
+            // Limón
+            fill(250,220,50);
+            stroke(180,140,10);
+            ellipse(315,115,45,30);
+
+            // Decoraciones extra
+            fill(40,150,60);
+            stroke(20,100,30);
+            triangle(95,220,110,200,115,225);
+            triangle(100,235,120,215,125,240);
+            triangle(300,320,315,295,320,325);
+            triangle(320,320,335,295,340,325);
+
+            // Sándwich 
+            fill(190,125,55); stroke(120,70,25); triangle(95,155,250,115,100,65); // Pan
+            fill(210,65,70); stroke(140,35,35); triangle(102,162,251,120,105,115); // Jamón
+            fill(255,210,45); stroke(180,140,15); triangle(109,156,243,119,110,113); // Queso
+            fill(55,160,55); stroke(180,140,15); triangle(107,150,234,119,127,103); // Lechuga
+            fill(225,165,85); stroke(120,75,25); triangle(102,146,240,116,103,69); // Pan superior
+
+            // Semillas del pan
+            fill(140,90,40); noStroke();
+            ellipse(125,90,5,3); ellipse(144,101,5,3); ellipse(112,105,5,3);
+            ellipse(127,113,5,3); ellipse(142,90,5,3); ellipse(160,120,5,3);
+            ellipse(175,113,5,3); ellipse(217,115,5,3); ellipse(112,129,5,3);
+            ellipse(195,105,5,3); ellipse(188,119,5,3); ellipse(163,101,5,3);
+            ellipse(137,119,5,3); ellipse(110,83,5,3);
+        }
+    </script>
+</body>
+</html>

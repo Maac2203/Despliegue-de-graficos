@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspector del DOM - Árbol Jerárquico</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .dom-tree, .dom-tree ul {
+            list-style-type: none;
+            padding-left: 20px;
+            position: relative;
+        }
+        .dom-tree li {
+            margin: 10px 0;
+            padding: 8px 12px;
+            background-color: #0f172a;
+            color: #38bdf8;
+            border: 1px solid #0284c7;
+            border-radius: 6px;
+            display: inline-block;
+            font-family: monospace;
+            font-weight: bold;
+        }
+        .dom-tree .tag-desc {
+            color: #94a3b8;
+            font-size: 0.85em;
+            font-weight: normal;
+            margin-left: 8px;
+        }
+        .dom-container {
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Inspector del DOM del Proyecto</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="teoria.html">Teoría (Canvas / p5.js)</a></li>
+                <li><a href="dom-inspector.html">Inspector DOM</a></li>
+                <li>
+                    <span>Dibujos:</span>
+                    <a href="rana.html">1. Rana</a> | 
+                    <a href="conejo.html">2. Dientes de conejo</a> | 
+                    <a href="cena.html">3. ¿Qué hay de cena?</a> | 
+                    <a href="dia-nevado.html">4. Día nevado</a> | 
+                    <a href="muneco-nieve.html">5. Muñeco de nieve</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Estructura Jerárquica del DOM (Document Object Model)</h2>
+        <p>A continuación se representa la jerarquía de etiquetas HTML del documento principal (<code>index.html</code>) y las páginas del sitio:</p>
+
+        <div class="dom-container">
+            <ul class="dom-tree">
+                <li>&lt;html&gt;
+                    <ul>
+                        <li>&lt;head&gt;
+                            <ul>
+                                <li>&lt;meta&gt; <span class="tag-desc">charset, viewport</span></li>
+                                <li>&lt;title&gt; <span class="tag-desc">Título de la página</span></li>
+                                <li>&lt;link&gt; <span class="tag-desc">estilos.css</span></li>
+                                <li>&lt;script&gt; <span class="tag-desc">Librería p5.js</span></li>
+                            </ul>
+                        </li>
+                        <li>&lt;body&gt;
+                            <ul>
+                                <li>&lt;header&gt;
+                                    <ul>
+                                        <li>&lt;h1&gt; <span class="tag-desc">Título principal</span></li>
+                                        <li>&lt;nav&gt;
+                                            <ul>
+                                                <li>&lt;ul&gt; -> &lt;li&gt; -> &lt;a&gt; <span class="tag-desc">Menú de navegación</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>&lt;main&gt;
+                                    <ul>
+                                        <li>&lt;h2&gt; <span class="tag-desc">Subtítulo de la sección</span></li>
+                                        <li>&lt;div id="canvas-container"&gt;
+                                            <ul>
+                                                <li>&lt;canvas&gt; <span class="tag-desc">Lienzo de dibujo p5.js</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>&lt;footer&gt;
+                                    <ul>
+                                        <li>&lt;p&gt; <span class="tag-desc">Pie de página</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 - Proyecto de Computación Gráfica</p>
+    </footer>
+
+</body>
+</html>

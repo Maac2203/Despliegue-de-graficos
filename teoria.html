@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría - Canvas y p5.js</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Conceptos Teóricos: Canvas y p5.js</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="teoria.html">Teoría (Canvas / p5.js)</a></li>
+                <li><a href="dom-inspector.html">Inspector DOM</a></li>
+                <li>
+                    <span>Dibujos:</span>
+                    <a href="rana.html">1. Rana</a> | 
+                    <a href="conejo.html">2. Dientes de conejo</a> | 
+                    <a href="cena.html">3. ¿Qué hay de cena?</a> | 
+                    <a href="dia-nevado.html">4. Día nevado</a> | 
+                    <a href="muneco-nieve.html">5. Muñeco de nieve</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>1. Uso de la etiqueta HTML &lt;canvas&gt; y Contexto 2D</h2>
+            <p>La etiqueta <code>&lt;canvas&gt;</code> es un elemento de HTML5 que sirve como un lienzo gráfico en blanco donde se pueden dibujar gráficos, figuras y animaciones mediante JavaScript.</p>
+            <p>Para manipular el lienzo, se utiliza la API del <strong>contexto de renderizado 2D</strong> (<code>getContext('2d')</code>). Este contexto proporciona un plano de coordenadas cartesianas donde la esquina superior izquierda representa el punto <code>(0,0)</code>. A través de este objeto se ejecutan métodos para dibujar trazados, rectángulos, arcos, texto y aplicar rellenos o bordes con color.</p>
+        </article>
+
+        <hr>
+
+        <article>
+            <h2>2. Fundamentos de la Librería p5.js</h2>
+            <p><strong>p5.js</strong> es una librería de JavaScript orientada a la programación creativa y enfocada en hacer el código gráfico accesible para artistas, diseñadores y estudiantes.</p>
+            <p>Su arquitectura básica se apoya en dos funciones globales principales:</p>
+            <ul>
+                <li><code>setup()</code>: Se ejecuta una sola vez al cargar la página. Aquí se inicializan el lienzo (<code>createCanvas()</code>) y los ajustes globales.</li>
+                <li><code>draw()</code>: Se ejecuta continuamente en bucle (por defecto a 60 cuadros por segundo). Permite actualizar el lienzo y crear animaciones e interactividad en tiempo real.</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2026 - Proyecto de Computación Gráfica</p>
+    </footer>
+
+</body>
+</html>

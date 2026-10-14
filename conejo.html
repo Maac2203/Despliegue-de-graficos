@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Dientes de conejo - Proyecto p5.js</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Gráfico 2: Dientes de conejo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="teoria.html">Teoría (Canvas / p5.js)</a></li>
+                <li><a href="dom-inspector.html">Inspector DOM</a></li>
+                <li>
+                    <span>Dibujos:</span>
+                    <a href="rana.html">1. Rana</a> | 
+                    <a href="conejo.html">2. Dientes de conejo</a> | 
+                    <a href="cena.html">3. ¿Qué hay de cena?</a> | 
+                    <a href="dia-nevado.html">4. Día nevado</a> | 
+                    <a href="muneco-nieve.html">5. Muñeco de nieve</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>2. Dientes de conejo</h2>
+        <div id="canvas-container"></div>
+    </main>
+
+    <footer>
+        <p>© 2026 - Proyecto de Computación Gráfica</p>
+    </footer>
+
+    <script>
+        function setup() {
+            let canvas = createCanvas(400, 400);
+            canvas.parent('canvas-container');
+        }
+
+        function draw() {
+            background(240);
+            stroke(0);
+            strokeWeight(1);
+            fill(255);
+
+            ellipse(150, 70, 60, 120);  // Oreja izquierda
+            ellipse(240, 70, 60, 120);  // Oreja derecha
+
+            ellipse(200, 170, 150, 150); // Cara
+
+            var ojo = 24;
+            fill(0, 0, 0);
+            ellipse(170, 150, ojo, ojo); // Ojo izquierdo
+            ellipse(230, 150, ojo, ojo); // Ojo derecho
+
+            line(150, 200, 250, 200);   // Boca
+
+            var largd = 40;
+            noFill();
+            rect(185, 200, 15, largd); // Diente izquierdo
+            rect(200, 200, 15, largd); // Diente derecho
+        }
+    </script>
+</body>
+</html>
